@@ -1,0 +1,108 @@
+{
+  "builder_name": "parquet",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "kor_hellaswag",
+  "dataset_size": 159463031,
+  "description": "",
+  "download_checksums": {
+    "hf://datasets/KETI-AIR/kor_hellaswag@cf666de8b31a569e9dea63c716b0c145d763df99/data/test-00000-of-00001-48cae429c81bd81f.parquet": {
+      "num_bytes": 11661860,
+      "checksum": null
+    },
+    "hf://datasets/KETI-AIR/kor_hellaswag@cf666de8b31a569e9dea63c716b0c145d763df99/data/train-00000-of-00001-ec898b6c93e48c85.parquet": {
+      "num_bytes": 46307744,
+      "checksum": null
+    },
+    "hf://datasets/KETI-AIR/kor_hellaswag@cf666de8b31a569e9dea63c716b0c145d763df99/data/validation-00000-of-00001-8e196e4f4335d85c.parquet": {
+      "num_bytes": 12025039,
+      "checksum": null
+    }
+  },
+  "download_size": 69994643,
+  "features": {
+    "data_index_by_user": {
+      "dtype": "int32",
+      "_type": "Value"
+    },
+    "ind": {
+      "dtype": "int32",
+      "_type": "Value"
+    },
+    "activity_label": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "ctx_a": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "ctx_b": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "ctx": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "endings": {
+      "feature": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    },
+    "source_id": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "split": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "split_type": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "label": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "joined": {
+      "feature": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 229457674,
+  "splits": {
+    "test": {
+      "name": "test",
+      "num_bytes": 26342899,
+      "num_examples": 10003,
+      "dataset_name": "kor_hellaswag"
+    },
+    "train": {
+      "name": "train",
+      "num_bytes": 105749644,
+      "num_examples": 39905,
+      "dataset_name": "kor_hellaswag"
+    },
+    "validation": {
+      "name": "validation",
+      "num_bytes": 27370488,
+      "num_examples": 10042,
+      "dataset_name": "kor_hellaswag"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}

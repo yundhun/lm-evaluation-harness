@@ -29,7 +29,7 @@ class HFLM(BaseLM):
         subfolder=None,
         tokenizer=None,
         batch_size=1,
-	max_length=None,
+        max_length=None,
         load_in_8bit: Optional[bool] = False,
         trust_remote_code: Optional[bool] = False,
         dtype: Optional[Union[str, torch.dtype]]="auto",
@@ -41,7 +41,7 @@ class HFLM(BaseLM):
         assert isinstance(batch_size, (int, str))
 
         device_list = set(
-            ["cuda", "cpu"] + [f"cuda:{i}" for i in range(torch.cuda.device_count())]
+            ["cuda", "cpu", "mps"] + [f"cuda:{i}" for i in range(torch.cuda.device_count())]
         )
         if device and device in device_list:
             self._device = torch.device(device)

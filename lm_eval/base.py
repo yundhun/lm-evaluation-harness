@@ -507,13 +507,18 @@ class Task(abc.ABC):
             - `datasets.DownloadMode.FORCE_REDOWNLOAD`
                 Fresh download and fresh dataset.
         """
-        self.dataset = datasets.load_dataset(
-            path=self.DATASET_PATH,
-            name=self.DATASET_NAME,
-            data_dir=data_dir,
-            cache_dir=cache_dir,
-            download_mode=download_mode,
-        )
+        if self.DATASET_NAME == 'hellaswag':
+            #hellaswag_path = '/Users/1112082/Desktop/llm_benchmark/git/lm-evaluation-harness/datasets/ko_hellaswag_small/'
+            hellaswag_path = './datasets/ko_hellaswag_small/'
+            self.dataset = datasets.load_from_disk( hellaswag_path )
+        else:
+            self.dataset = datasets.load_dataset(
+                path=self.DATASET_PATH,
+                name=self.DATASET_NAME,
+                data_dir=data_dir,
+                cache_dir=cache_dir,
+                download_mode=download_mode,
+            )
 
     def should_decontaminate(self):
         """Whether this task supports decontamination against model training set."""
